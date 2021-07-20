@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".UI.HomeScreen"
+    tools:layout_editor_absoluteY="25dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bank_logo"
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:src="@drawable/bank"
+        app:layout_constraintBottom_toTopOf="@+id/all_users"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank_title" />
+
+    <TextView
+        android:id="@+id/bank_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/banking_system_app"
+        android:textColor="#DDFFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bank_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/all_users"
+        android:layout_width="235dp"
+        android:layout_height="43dp"
+        android:onClick="showAllUsers"
+        android:text="@string/all_users"
+        app:iconTint="#474242"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/all_transactions"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/all_transactions"
+        android:layout_width="235dp"
+        android:layout_height="43dp"
+        android:onClick="showAllTransactions"
+        android:text="@string/all_transactions"
+        app:iconTint="#854646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/all_users" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
